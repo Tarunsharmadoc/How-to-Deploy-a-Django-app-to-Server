@@ -70,6 +70,7 @@ There are multiple blog posts and tutorials already available for Django Hosting
     ---
     ```sudo nano /etc/systemd/system/gunicorn.service```
     - add following in the file
+    - If that file causes any problem try to change the User and Group with root or your current username
      ```
 
         [Unit]
@@ -145,7 +146,6 @@ Lets understand what is writtern there and how it shall work :
 5. location static and media points to static and media folders of project
 6. autoindex on signifies the indexing of media files on google automatically
 
-The work is tried and tested on multiple websites as on 29/03/2021 , any errors/suggestions can be sent at [webmaster@realdevils.com](mailto:webmaster@realdevils.com)
 
 
 
