@@ -137,10 +137,12 @@ Now if it dosen't show up or shows only welcome to Nginx , there might be errors
 -   ``` sudo systemctl status gunicorn``` 
 
 Sometimes there is a 403 on static files due to lack of
-permissions to nginx Nginx to run with root user has to be
-configured as root user (by default the user is www-data) so
+permissions to nginx 
+Nginx to run with root user has to be configured as root user (by default the user is www-data) so
 please go to
- sudo nano /etc/nginx/nginx.conf 
+  - ``` sudo nano /etc/nginx/nginx.conf
+  - '''
+
 and replace the user in the First line to root then restart the
 server.
 
