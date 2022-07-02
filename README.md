@@ -136,7 +136,13 @@ Now we will configure the final file for nginx web server
 Now if it dosen't show up or shows only welcome to Nginx , there might be errors in gunicorn configurations that can be checked using
 -   ``` sudo systemctl status gunicorn``` 
 
-
+Sometimes there is a 403 on static files due to lack of
+permissions to nginx Nginx to run with root user has to be
+configured as root user (by default the user is www-data) so
+please go to
+ sudo nano /etc/nginx/nginx.conf 
+and replace the user in the First line to root then restart the
+server.
 
 Lets understand what is writtern there and how it shall work :
 1. The server is listening at port 80 (default for web servers)
